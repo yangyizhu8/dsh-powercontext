@@ -34,6 +34,13 @@ decides whether that evidence should produce or update Memory. Do not call
 - Use \`pc_memory_get\` with the exact returned \`citation\` when full immutable
   entry details are needed.
 
+## Continue prior work
+
+When the user asks to continue, resume, or pick up prior work ("继续之前的项目",
+"continue the project"), call \`pc_handoff_continue\` with \`selection: "latest"\`
+to restore the most recent committed handoff. Follow its \`state\` and
+\`next_action\`. If continue reports no handoff, fall back to \`pc_search\`.
+
 ## Hand off current work
 
 Use Handoff when work must move to another task, session, or model.
